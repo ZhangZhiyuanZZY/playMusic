@@ -75,9 +75,6 @@ static NSMutableDictionary *_musics;
     }
 }
 
-
-
-
 #pragma mark - 播放音效
 
 ///集成一个方法
@@ -92,7 +89,7 @@ static NSMutableDictionary *_musics;
         ///得到url
         NSURL *url = [[NSBundle mainBundle] URLForResource:soundName withExtension:nil];
         
-        //给soundID赋值
+        //给soundID赋值`
         AudioServicesCreateSystemSoundID((__bridge CFURLRef _Nonnull)(url), &soundID);
         //把soundID放入字典中
         _soundIDs[soundName] = @(soundID);//基本数据类型包装成, 对象
